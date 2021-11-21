@@ -1,0 +1,49 @@
+- id: ''
+  alias: WTW Night Mode
+  description: ''
+  trigger:
+  - at: ''
+    platform: time
+  condition:
+  - above: '1500'
+    condition: numeric_state
+    entity_id: sensor.wtw_current_speed
+  action:
+  - data:
+      value: 26
+    entity_id: input_number.wtw_speed
+    service: input_number.set_value
+  mode: single
+- id: ''
+  alias: WTW Day Mode
+  description: ''
+  trigger:
+  - at: ''
+    platform: time
+  condition:
+  - above: '200'
+    below: '2000'
+    condition: numeric_state
+    entity_id: sensor.wtw_current_speed
+  action:
+  - data:
+      value: 66
+    entity_id: input_number.wtw_speed
+    service: input_number.set_value
+  mode: single
+- id: ''
+  alias: WTW Shower Mode
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - data:
+      value: 90
+    entity_id: input_number.wtw_speed
+    service: input_number.set_value
+  - delay: 0:30
+  - data:
+      value: 66
+    entity_id: input_number.wtw_speed
+    service: input_number.set_value
+  mode: single

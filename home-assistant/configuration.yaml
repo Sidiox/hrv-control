@@ -1,0 +1,51 @@
+
+
+input_number:
+  wtw_speed:
+    name: WTW Set Speed
+    initial: 10
+    min: 0
+    max: 100
+    step: 2
+    icon: mdi:fan
+
+sensor:
+  - platform: mqtt
+    name: "WTW Current Speed"
+    state_topic: "home/wtw/speed"
+    value_template: "{{float(value) | round(0)}}"
+    unit_of_measurement: "RPM"
+
+  - platform: mqtt
+    name: "WTW Exhaust Temperature"
+    state_topic: "home/wtw/exhaust/in/temp"
+    unit_of_measurement: "C"
+
+  - platform: mqtt
+    name: "WTW Supply Temperature"
+    state_topic: "home/wtw/supply/in/temp"
+    unit_of_measurement: "C"
+
+  - platform: mqtt
+    name: "Swallow Door"
+    state_topic: "/home/swallow_door/state"
+
+  - platform: mqtt
+    name: "WTW Diagnostic"
+    state_topic: "home/wtw/diagnostic"
+
+  - platform: mqtt
+    name: "WTW Fault"
+    state_topic: "home/wtw/fault"
+
+  - platform: mqtt
+    name: "WTW Vent Mode"
+    state_topic: "home/wtw/ventmode"
+
+  - platform: mqtt
+    name: "WTW Bypass Status"
+    state_topic: "home/wtw/bypass/status"
+
+  - platform: mqtt
+    name: "WTW Bypass Automatic Status"
+    state_topic: "home/wtw/bypass/automaticstatus"
