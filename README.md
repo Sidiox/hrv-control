@@ -5,9 +5,9 @@ Utilizes Arduino with OpenTherm for the Brink HRV control, pushing and listening
 Then Home-Assistant uses MQTT to receive sensor information and push speed control.
 
 
-Makes use of a modified [https://github.com/ihormelnyk/opentherm_library](https://github.com/ihormelnyk/opentherm_library):
-[my branch](https://github.com/Sidiox/opentherm_library/tree/hvac-support) [my pr](https://github.com/ihormelnyk/opentherm_library/pull/36).
-The hardware is however based on the excellent: (https://github.com/jpraus/arduino-opentherm)[https://github.com/jpraus/arduino-opentherm]
+Makes use of a modified [opentherm_library](https://github.com/ihormelnyk/opentherm_library):
+[my branch](https://github.com/Sidiox/opentherm_library/tree/hvac-support)/[my pr](https://github.com/ihormelnyk/opentherm_library/pull/36).
+The hardware is based on the excellent: [jpraus Arduino OpenTherm Shield](https://github.com/jpraus/arduino-opentherm)
 
 
 # Home-Assistant
