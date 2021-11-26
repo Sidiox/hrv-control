@@ -19,3 +19,22 @@ Automations:
 - WTW Shower Mode: Enables max speed for 30 minutes for better ventilation when showering
 
 Configuration contains a bunch of sensors subscribing to the various published MQTT channels from the Arduino.
+
+# Scanner
+
+The `scanner` folder contains an Arduino sketch to scan the OpenTherm bus for readable IDs.
+On my HRV I got readable results for the following IDs:
+```
+70
+72
+74
+75
+77
+80
+81
+82
+83
+86
+88
+89
+```
